@@ -2,7 +2,6 @@
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import HomeScreen from './Pages/Home/HomeScreen';
-
 function App() {
   const user = {
     name:"aswick",
@@ -10,7 +9,7 @@ function App() {
     password:"55677889"
   };
   return (
-    <div >
+    <div className="app">
       <Router>
         {!user?<h1>
           Login Screen

@@ -25,7 +25,7 @@ const Banner = () => {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
   }
 
-  console.log(bmovies);
+//   console.log(bmovies);
   return (
     <>
       <div>
