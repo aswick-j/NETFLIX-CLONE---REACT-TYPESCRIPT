@@ -1,14 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+
 import './App.css';
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import HomeScreen from './Pages/Home/HomeScreen';
 
 function App() {
+  const user = {
+    name:"aswick",
+    email: "aswick@test.com",
+    password:"55677889"
+  };
   return (
-    <div className="App">
-     <h1>
-      fdhfsho
-     </h1>
+    <div >
+      <Router>
+        {!user?<h1>
+          Login Screen
+        </h1>:
+        <HomeScreen></HomeScreen>}
+      </Router>
     </div>
   );
 }
