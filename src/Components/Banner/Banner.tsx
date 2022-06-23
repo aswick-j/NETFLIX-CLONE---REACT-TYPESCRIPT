@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../helpers/axios";
 import UrlReq from "../../helpers/UrlReq";
-import "../Banner/Banner.css"
+import "../Banner/Banner.css";
 type Props = {};
 
 const Banner = () => {
@@ -41,12 +41,12 @@ const Banner = () => {
             <h1 className="banner__text">
               {bmovies?.title || bmovies?.name || bmovies?.original_name}
             </h1>
+            <div className="banner__buttons">
+              <button className="banner__button">Play</button>
+              <button className="banner__button">My List</button>
+            </div>
+            <h1 className="banner__desc">{truncate(bmovies?.overview, 150)}</h1>
           </div>
-          <div >
-            <button className="banner__button">Play</button>
-            <button className="banner__button">List</button>
-          </div>
-          <div className="banner__desc">{truncate(bmovies?.overview, 150)}</div>
           <div className="banner__crossfade"></div>
         </header>
       </div>
