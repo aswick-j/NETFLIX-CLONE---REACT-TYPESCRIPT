@@ -5,22 +5,23 @@ import UrlReq from "../../helpers/UrlReq";
 type Props = {
   title: any;
   isLarge: boolean;
-  fetchDatas: any;
+  fetchurl:any
 };
 const Rows = (props: Props) => {
   const [rmovies, setRmovies] = useState<any>([]);
-  const fetchDatas = props.fetchDatas;
+  // const fetchData = props.fetchData;
   const isLarge = props.isLarge
+  const fetchurl = props.fetchurl
   useEffect(() => {
     const fetchData = async () => {
-      const request = await axios.get(UrlReq.fetchNetflixOriginals);
+      const request = await axios.get(fetchurl);
       setRmovies(request.data.results);
 
       return request;
     };
 
     fetchData();
-  }, [fetchDatas]);
+  }, [fetchurl]);
   const base_url = "https://image.tmdb.org/t/p/original";
 //   console.log(rmovies);
   return (

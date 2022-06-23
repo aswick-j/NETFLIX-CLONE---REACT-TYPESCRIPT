@@ -11,13 +11,13 @@ const HomeScreen = (props: Props) => {
     <>
       <NavBar />
       <Banner/>
-      <Rows title="Netflix Originals" fetchDatas={UrlReq.fetchNetflixOriginals} isLarge={true}/>
-      <Rows title="Trending Now" fetchDatas={UrlReq.fetchTrending} isLarge={false}/>
-      <Rows title="Top Rated" fetchDatas={UrlReq.fetchTopRated} isLarge={false}/>
-      <Rows title="Best in Romance" fetchDatas={UrlReq.fetchRomanceMovies} isLarge={false}/>
-      <Rows title="Best in Actions" fetchDatas={UrlReq.fetchActionMovies} isLarge={false}/>
-      <Rows title="Best in Comedy" fetchDatas={UrlReq.fetchComedyMovies} isLarge={false}/>
-      <Rows title="Best in Horror" fetchDatas={UrlReq.fetchHorrorMovies} isLarge={false}/>
+      <Rows title="Netflix Originals" fetchurl={UrlReq.fetchNetflixOriginals} isLarge={true}/>
+      <Rows title="Trending Now" fetchurl={UrlReq.fetchTrending} isLarge={false}/>
+      <Rows title="Top Rated" fetchurl={UrlReq.fetchTopRated} isLarge={false}/>
+      <Rows title="Best in Romance" fetchurl={UrlReq.fetchRomanceMovies} isLarge={false}/>
+      <Rows title="Best in Actions" fetchurl={UrlReq.fetchActionMovies} isLarge={false}/>
+      <Rows title="Best in Comedy" fetchurl={UrlReq.fetchComedyMovies} isLarge={false}/>
+      <Rows title="Best in Horror" fetchurl={UrlReq.fetchHorrorMovies} isLarge={false}/>
     </>
   );
 };
