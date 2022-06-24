@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./NavBar.css";
-
+import {Link} from "react-router-dom";
 type Props = {};
 
 const NavBar = () => {
@@ -25,16 +25,20 @@ const NavBar = () => {
     <>
       <nav className={`nav__bar ${navScroll && "nav__black"}`}>
         <div className="nav__content">
+            <Link to="/">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
             alt=""
             className="nav__logo"
           ></img>
+          </Link>
+          <Link to="/profile">
           <img
             src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
             alt=""
             className="nav__avatar"
           ></img>
+           </Link>
         </div>
       </nav>
     </>

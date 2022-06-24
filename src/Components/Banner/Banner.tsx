@@ -8,7 +8,7 @@ const Banner = () => {
   const [bmovies, setBmovies] = useState<any>([]);
   useEffect(() => {
     const fetchDatas = async () => {
-      const request = await axios.get(UrlReq.fetchNetflixOriginals);
+      const request = await axios.get(UrlReq.fetch2022TamilMovies);
       setBmovies(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)

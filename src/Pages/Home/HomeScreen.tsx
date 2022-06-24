@@ -11,6 +11,8 @@ const HomeScreen = (props: Props) => {
     <>
       <NavBar />
       <Banner/>
+      <Rows title="Best in Tamil Movies" fetchurl={UrlReq.fetch2022TamilMovies} isLarge={true}/>
+      <Rows title="Best in Telugu Movies" fetchurl={UrlReq.fetch2022TeluguMovies} isLarge={true}/>
       <Rows title="Netflix Originals" fetchurl={UrlReq.fetchNetflixOriginals} isLarge={true}/>
       <Rows title="Trending Now" fetchurl={UrlReq.fetchTrending} isLarge={false}/>
       <Rows title="Top Rated" fetchurl={UrlReq.fetchTopRated} isLarge={false}/>
@@ -18,6 +20,7 @@ const HomeScreen = (props: Props) => {
       <Rows title="Best in Actions" fetchurl={UrlReq.fetchActionMovies} isLarge={false}/>
       <Rows title="Best in Comedy" fetchurl={UrlReq.fetchComedyMovies} isLarge={false}/>
       <Rows title="Best in Horror" fetchurl={UrlReq.fetchHorrorMovies} isLarge={false}/>
+      <Rows title="Best in Documentaries" fetchurl={UrlReq.fetchDocumentaries} isLarge={false}/>
     </>
   );
 };
